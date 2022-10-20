@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;700&display=swap');
 *{
 	box-sizing: border-box;
 	padding: 0;
@@ -5,20 +6,24 @@
 }
 
 body{
-	font-family: sans-serif;
+	font-family: 'Martel', serif;
 
 }
 
 /*Start Header*/
 
 header{
-	height: 60vh;
-	background: linear-gradient(steelblue,lightskyblue);
+	height: 95vh;
+	/*background: linear-gradient(steelblue,lightskyblue);*/
+	/*background: url("./../assets/img/banner/banner8.jpg");*/
+	opacity: 0.95;
 
 	background-repeat: no-repeat;
 	background-position: center;
 
 	position: relative;
+	transition: all 2.5s linear;
+
 }
 
 /*Start navbar*/
@@ -28,10 +33,77 @@ header{
 
 }
 
+
+
 .nav-link{
 	font-size: 16px;
 	color: #fff !important;
 }
+
+.navbar-toggler,.navbar-toggler:hover,.navbar-toggler:focus{
+
+	border: none;
+	outline: none;
+	box-shadow: none;
+	
+}
+
+.dropdowns{
+	z-index: 2;
+	position: relative;
+
+
+}
+
+.dropbtn{
+	background: none !important;
+}
+
+.dropdown-contents{
+
+	width: 230px;
+	background: #f6f6f6;
+
+	position: absolute;
+	z-index: 10;
+
+	display: none;
+
+}
+
+.dropdown-contents a{
+	
+	color: #000;
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+}
+
+.dropdowns a:hover{
+	background: #ddd;
+}
+
+.dropdown-contents .search{
+
+	width: 100%;
+	background-image: url("./../assets/img/icon/searchicon.png");
+	background-repeat: no-repeat;
+	background-position: 10px center; 
+	padding: 10px 5px 10px 40px;
+
+	border: none;
+	border-bottom: 1px solid #ddd;
+
+}
+
+.dropdown-contents .search:focus{
+	outline: none;
+}
+
+.dropdown-contents.show{
+	display: block;
+}
+
 
 /*End navbar*/
 
@@ -48,6 +120,52 @@ header{
 
 	transform: translate(-50%,-50%);
 }
+
+@keyframes bannerani{
+	from{
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	to{
+		transform: translateY(0px);
+		opacity: 1;
+		
+
+	}
+}
+
+.bannerheaders{
+
+	/*background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3));
+	border: 2px dashed #fff;
+	padding: 20px;
+	box-shadow: 10px 10px 100px 20px #000;*/
+
+	/*background: linear-gradient(rgba(0,0,0,0.3));*/
+	/*border: 2px dashed #fff;*/
+	font-size: 60px;
+	padding: 20px;
+	/*text-shadow: 4px 3px 30px rgba(0,0,0,0.5);*/
+	text-shadow: 3px 3px 100px 10px rgba(0,0,0,0.5);
+	animation-name: bannerani;
+	animation-duration: 2s;
+}
+
+.bannerparagraphs{
+
+	/*background: linear-gradient(rgba(0,0,0,0.3));
+	border: 2px dashed #fff;
+	padding: 20px;
+	box-shadow: 3px 3px 100px 10px rgba(0,0,0,0.5);*/
+	animation-name: bannerani;
+	animation-duration: 2s;
+	animation-delay: 0.5s;
+	animation-fill-mode: backwards;
+}
+
+
+
+
 
 /*End banner*/
 

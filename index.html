@@ -4,7 +4,7 @@
 	<title>Amias Hotel</title>
 	
 	<!-- fav icon -->
-	<!-- <link rel="stylesheet" type="text/css" href="./assets/img/fav/" rel="icon" type="image/" sizes="16x16"> -->
+	<link rel="stylesheet" type="text/css" href="./assets/img/fav/favicon3.png" rel="icon" type="image/" sizes="16x16">
 
 	<!-- bootstrap css1 js1 -->
 	<link rel="stylesheet" type="text/css" href="./assets/libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
@@ -25,30 +25,40 @@
 	<header>
 		
 		<!-- Start navbar -->
-		<nav class="navbar navbar-expand-md nav-light bg-light">
+		<nav class="navbar navbar-expand-md navbar-dark">
 
 			<div class="container">
 				
-				<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarcollapse">
+				<button class="navbar-toggler ms-auto" data-bs-toggle="collapse" data-bs-target="#navbarcollapse">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
 				<div id="navbarcollapse" class="navbar-collapse collapse">
 					
-					<ul class="navbar-nav">
+					<ul class="navbar-nav me-auto">
 						<li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
 						<li class="nav-item"><a href="index.html" class="nav-link">Rooms</a></li>
 						<li class="nav-item"><a href="index.html" class="nav-link">Blog</a></li>
+						<li class="nav-item"><a href="index.html" class="nav-link">Restaurant</a></li>
 						<li class="nav-item"><a href="index.html" class="nav-link">Contact</a></li>
-						<li class="nav-item"><a href="index.html" class="nav-link">FAQ</a></li>
+						<li class="nav-item dropdowns">
+							<a href="#" class="nav-link dropbtn" onclick="dropbtn()">FAQ</a>
+							<div id="mydropdown" class="dropdown-contents">
+								<input type="text" name="search" id="search" onkeyup="dropfilter()" class="search" placeholder="search">
+								<a href="javascript:void(0);">Room Booking</a>
+								<a href="javascript:void(0);">Transportation</a>
+								<a href="javascript:void(0);">Payment</a>
+								<a href="javascript:void(0);">Wifi</a>
+								<a href="javascript:void(0);">Food</a>
+								<a href="javascript:void(0);">Bar</a>
+								<a href="javascript:void(0);">Spa</a>
+							</div>
+						</li>
 					</ul>
 
-				</div>
-
-
-				<div class="dropdown">
-					<a href="#" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-						User
+					<div class="dropdown my-2">
+					<a href="#" class="dropdown-toggle text-decoration-none" data-bs-toggle="dropdown">
+						<img src="./assets/img/users/user1.jpg" class="rounded-circle" width="32px" height="32px">
 					</a>
 					<ul class="dropdown-menu text-small">
 						<li><a href="#" class="dropdown-item">Profile</a></li>
@@ -58,6 +68,11 @@
 						
 					</ul>
 				</div>
+
+				</div>
+
+
+				
 
 
 
