@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
+:root{
+
+	--pri-color: #00334e;
+	/*--sec-color: #dbebfa;*/
+	--sec-color: #ffcb74;
+};
+
 *{
 	box-sizing: border-box;
 	padding: 0;
@@ -6,7 +16,9 @@
 }
 
 body{
-	font-family: 'Martel', serif;
+	/*font-family: 'Martel', serif;*/
+	/*font-family: 'Viaoda Libre', cursive;*/
+	font-family: sans-serif;
 
 }
 
@@ -29,7 +41,10 @@ header{
 /*Start navbar*/
 
 .navbar{
-	background: linear-gradient(to right,rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+	/*background: linear-gradient(to right,rgba(0,0,0,0.7),rgba(0,0,0,0.7));*/
+	
+	background: rgba(0, 51, 78,0.7);
+
 
 }
 
@@ -143,12 +158,17 @@ header{
 
 	/*background: linear-gradient(rgba(0,0,0,0.3));*/
 	/*border: 2px dashed #fff;*/
-	font-size: 60px;
+	min-width: 600px;
+	font-family: 'Viaoda Libre', cursive;
+	font-size: 80px;
+	letter-spacing: 10px;
+	font-weight: 400;
 	padding: 20px;
 	/*text-shadow: 4px 3px 30px rgba(0,0,0,0.5);*/
 	text-shadow: 3px 3px 100px 10px rgba(0,0,0,0.5);
 	animation-name: bannerani;
 	animation-duration: 2s;
+	
 }
 
 .bannerparagraphs{
@@ -161,6 +181,7 @@ header{
 	animation-duration: 2s;
 	animation-delay: 0.5s;
 	animation-fill-mode: backwards;
+	
 }
 
 
@@ -170,3 +191,79 @@ header{
 /*End banner*/
 
 /*End Header*/
+
+/*Start Booking*/
+
+.search-rooms{
+	width: 80%;
+	/*background: linear-gradient(to left,skyblue,steelblue);*/
+	background: var(--pri-color);
+	box-shadow: rgba(0, 51, 78, 0.15) 0px 5px 15px 0px;
+	padding: 30px 0;
+	margin-top: -60px;
+
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.search-rooms .form-control{
+	max-width: 20%;
+	display: inline-block;
+	margin: 10px 5px;
+	border-radius: 0;
+
+}
+
+.search-rooms .form-control:focus{
+	box-shadow: none;
+}
+
+.search-rooms input[type=text]{
+	width: 200px;
+	transition: width 0.5s ease-in-out;
+}
+
+.search-rooms input[type=text]:focus{
+	width: 100%;
+}
+
+.btn-sec{
+	background: var(--sec-color);
+	color: var(--pri-color);
+}
+
+/*End Booking*/
+
+/*Start Rooms*/
+
+.rows{
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.columns{
+	max-width: 24.5%;
+	padding: 0 5px;
+	
+}
+
+.columns img{
+	width: 100%;
+	margin: 5px;
+}
+
+
+.columns img:hover{
+	opacity: 0.8;
+}
+
+@media (max-width: 800px){
+	.columns{
+		flex: 50%;
+		max-width: 50%;
+	}
+}
+
+/*End Rooms*/

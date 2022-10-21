@@ -1,5 +1,24 @@
 console.log("h");
 
+//Start JQ AREA
+
+$(document).ready(function(){
+	console.log("hekki");
+
+	//Start room
+
+	$('.roompopup').magnificPopup({ type: 'image'});
+
+	//End room
+});
+
+// Strar JQ AREA
+
+
+
+
+
+
 
 // Start Header
 
