@@ -24,12 +24,17 @@ $(document).ready(function(){
 
 //Start nav bar
 
-function dropbtn(){
+function dropbtn(e){
 
 	//console.log("h");
 
-	document.getElementById("mydropdown").classList.toggle("show");
+	// document.getElementById("mydropdown").classList.toggle("show");
 
+	//undefined
+	//console.log(this.nextElementSibling);
+	//console.log(e.target); //respective btn
+	//console.log(e.target.nextElementSibling);
+	e.target.nextElementSibling.classList.toggle("show");
 
 }
 
@@ -40,9 +45,10 @@ function dropfilter(){
 	getsearch = document.getElementById('search');
 	filter = getsearch.value.toUpperCase();
 
-	getdropdiv = document.getElementById('mydropdown');
+	//getdropdiv = document.getElementById('mydropdown');
 	// getlinks = document.querySelectorAll(".drop-contents a");
-	getlinks = getdropdiv.getElementsByTagName('a');
+	//getlinks = document.getElementsByTagName('a');
+	getlinks = document.querySelectorAll('.mydropdowns a')
 
 	for(var x = 0 ; x < getlinks.length ; x++){
 		//linkvalue = getlinks[x].textContent;
@@ -81,7 +87,7 @@ var getgen = genfun();
 
 var getheader = document.querySelector('header');
 getheader.style.background = `url('./assets/img/banner/banner${getgen.next().value}.jpg')`; //to HTML
-getheader.style.backgroundPosition ="center";
+//getheader.style.backgroundPosition ="center";
 getheader.style.backgroundSize = "cover";
 
 function autoload(){
@@ -98,3 +104,49 @@ setInterval(autoload,2500);
 
 
 //End Header
+
+//Start Testimonial
+
+const getcompanyname = document.querySelector('.companyname');
+const getrole = document.querySelector('.role');
+const gettestimonial = document.querySelector('.testimonial');
+
+const testimonialdata = [
+
+{
+	name: "Our Reataurant",
+	position: "Enjoy food with stanning lake view",
+	text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo"
+},
+
+{
+	name: "Our Cafe",
+	position: "Enjoy aribca grounded coffee with freshly baked",
+	text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo"
+},
+
+{
+	name: "Our Spa",
+	position: "Enjoy luxury spa with skillful message",
+	text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo"
+},
+{
+	name: "Our Swimmimg Pool",
+	position: "Enjoy swimming with crystal clear water",
+	text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo"
+},
+
+];
+
+let idx = 0;
+
+function updatetestimonial(){
+
+	
+	
+}
+
+setInterval(updatetestimonial,10000);
+
+
+//End Testimonial
