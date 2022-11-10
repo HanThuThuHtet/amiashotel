@@ -9,6 +9,13 @@
 	--sec-color: #ffcb74;
 };
 
+.bg-prii{
+	background: red;
+}
+.bg-sec{
+	background: var(--sec-color);
+}
+
 *{
 	box-sizing: border-box;
 	padding: 0;
@@ -205,6 +212,7 @@ header{
 	padding: 30px 0;
 	margin-top: -40px;
 
+
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
@@ -240,6 +248,7 @@ header{
 /*End Booking*/
 
 /*Start Rooms*/
+
 
 .rows{
 
@@ -345,7 +354,7 @@ header{
  	font-size: 28px;
  	position: absolute;
  
- 	top: 60px;
+ 	top: 100px;
  	
  }
 

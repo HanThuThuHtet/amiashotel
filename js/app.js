@@ -116,36 +116,55 @@ const testimonialdata = [
 {
 	name: "Our Reataurant",
 	position: "Enjoy food with stanning lake view",
-	text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo"
+	text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo"
 },
 
 {
 	name: "Our Cafe",
 	position: "Enjoy aribca grounded coffee with freshly baked",
-	text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo"
+	text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo"
 },
 
 {
 	name: "Our Spa",
 	position: "Enjoy luxury spa with skillful message",
-	text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo"
+	text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo"
 },
 {
 	name: "Our Swimmimg Pool",
 	position: "Enjoy swimming with crystal clear water",
-	text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo"
+	text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo"
 },
 
 ];
 
 let idx = 0;
 
+console.log(testimonialdata[idx].name);
+
 function updatetestimonial(){
 
-	
+	// getcompanyname.textContent = testimonialdata[idx].name;
+	// getrole.textContent = testimonialdata[idx].position;
+	// gettestimonial.textContent = testimonialdata[idx].text;
+
+	const {name,position,text} = testimonialdata[idx];
+
+	getcompanyname.textContent = name;
+	getrole.textContent = position;
+	gettestimonial.textContent = text;
+
+	//console.log(name,position,text);
+
+	idx++;
+
+	if(idx > testimonialdata.length-1){
+		idx=0;
+	}
 	
 }
 
+updatetestimonial();
 setInterval(updatetestimonial,10000);
 
 
