@@ -394,3 +394,152 @@ header{
  }
 
  /*End Testimonial*/
+ /* Start Adv Text Section */
+ .adv-container{
+    height:400px;
+    background-image:url('./../assets/img/banner/banner11.jpg');
+    background-size:cover;
+    position:relative;
+ }
+
+ .advtext{
+    font-family:sans-serif;
+    width:50%;
+    background:#fff;
+    color:#000;
+    font-size:5vw;
+    font-weight:bold;
+    text-align:center;
+    padding:5px;
+    /* margin:auto; */
+
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+    mix-blend-mode:screen;
+ }
+
+ .adv-container:hover{
+    animation:myadvani 3s linear infinite alternate;
+ }
+
+ @keyframes myadvani{
+  0%{
+      background-image:url('./../assets/img/banner/banner11.jpg');
+  }
+  50%{
+      background-image:url('./../assets/img/banner/banner10.jpg');
+  }
+  100%{
+      background-image:url('./../assets/img/banner/banner9.jpg');
+  }
+ }
+/* Start Adv Text Section */
+
+/* Start Staff Section */
+ .cards{
+  width:300px;
+  box-shadow:0 5px 5px rgba(0,0,0,0.3);
+  text-align:center;
+  margin:auto;
+  padding:0;    /*for remove padding in cards , cus of row */
+ }
+
+ .cards img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+ }
+
+ .title{
+  font-size:18px;
+  color:silver;
+ }
+
+ .cards a{
+  text-decoration:none;
+  font-size:22px;
+  color:#000;
+ }
+
+ .cards button{
+  width:100%;
+  background-color:#000;
+  color:#fff;
+  font-size:18px;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  padding:8px;
+ }
+
+ .cards:hover img{
+  opacity:0.7;
+ }
+/* End Staff Section */
+
+
+/* Start Property Section */
+ .propertylists{
+  cursor:pointer;
+  user-select:none;
+  color:#777;
+ }
+
+
+.activeitems{
+  color:#000;
+ }
+
+ .filters{
+  display:none;
+ }
+
+ .show{
+  display:block;
+ }
+/* End Property Section */
+
+
+/* Start Contact Section  */
+.tabcontents{
+  color:#fff;
+  text-align:center;
+  padding:50px;
+  display:none;
+}
+
+#phone{
+  background-color:grey;
+}
+
+#social{
+  background-color:slateblue;
+}
+
+#website{
+  background-color:slategray;
+}
+
+#address{
+  background-color:steelblue;
+}
+
+.btn-tabs{
+  width:25%;
+  background-color:#444;
+  color:#fff;
+  border:none;
+  outline:none;
+  padding:15px 20px;
+  cursor:pointer;
+  float:left;
+}
+
+.btn-tabs:hover{
+  background-color:#888;
+}
+/* End Contact Section */
+

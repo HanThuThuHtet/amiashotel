@@ -169,3 +169,119 @@ setInterval(updatetestimonial,10000);
 
 
 //End Testimonial
+
+//start property section
+
+filterby('all');
+function filterby(keyword){
+    // console.log(keyword);
+    var getfilters = document.querySelectorAll(".filters");
+    // console.log(getfilters)
+
+    if(keyword === 'all'){
+       keyword = '';
+    }
+
+    for(var x = 0 ; x < getfilters.length ; x++){
+        // console.log(getfilters[x])
+        // console.log(getfilters[x].className.indexOf(keyword) > -1)
+
+        removeshowclass(getfilters[x],'show');
+
+        if(getfilters[x].className.indexOf(keyword) > -1){
+            addshowclass(getfilters[x],'show');
+        }
+    }
+
+
+   
+}
+
+function addshowclass(ele,opt){
+    // console.log(ele)
+    var getfilters = ele.className.split(" ");   //want to need array
+    // console.log(getfilters)
+
+    var getopt = opt.split(" ");
+    // console.log(getopt);
+    // console.log(getopt.length); 
+    // console.log(opt.length)
+
+    for(var y = 0 ; y < getopt.length ; y++){
+        // console.log(getopt[y]);
+        // console.log(getfilters[y].indexOf(getopt[y] === -1));
+
+        if(getfilters[y].indexOf(getopt[y]) === -1){
+            // ele.classList.add(getopt[y])
+            ele.className += " "+getopt[y];
+        }
+
+    }
+}
+
+function removeshowclass(ele,opt){
+    // console.log(ele)
+    let getfilters = ele.className.split(' ');
+    console.log(getfilters);
+
+    // getfilters.forEach(function(getfilter){
+    //     // console.log(getfilter.indexOf(opt) > -1)
+    //     if(getfilter.indexOf(opt) > -1){
+    //         ele.classList.remove(opt)
+    //     }
+    // });
+
+    let getopt = opt.split();
+    console.log(getopt.length);
+
+    for(var k = 0 ; k < getfilters.length ; k++){
+        // console.log(getfilters[k]);
+        // console.log(getfilters[0]);
+        // console.log(getfilters[1]);
+
+        // console.log(getfilters[k])
+
+        while(getfilters.indexOf(getopt[k]) > -1){
+            getfilters.splice(getfilters.indexOf(getopt[k]),1)
+        }
+    }
+
+    // console.log(getfilters)
+    // console.log(getfilters.join(' ')) //change string 
+
+    ele.className = getfilters.join(' ');
+    console.log(ele.className);
+   
+}
+
+var getftcontrol = document.getElementById('filtercontrol');
+let getlis = getftcontrol.getElementsByClassName('list-inline-item');
+  
+for(var i = 0 ; i < getlis.length ; i++){
+    getlis[i].addEventListener('click',function(){
+        let curractives = document.querySelector('.activeitems');
+        curractives.className = curractives.className.replace(' activeitems'," ");
+        this.classList.add('activeitems')
+    })
+}
+
+//end property section
+
+// Start Contact Section 
+// tabbox('phone');
+ function tabbox(link,evn,btncolor){
+    var gettabconents = document.getElementsByClassName('tabcontents');
+    var getbtntabs = document.getElementsByClassName('btn-tabs')
+
+    for(var i = 0 ; i < gettabconents.length ; i++){
+        gettabconents[i].style.display = "none";
+        getbtntabs[i].style.backgroundColor = '';
+    }
+
+    document.getElementById(link).style.display = "block";
+    evn.style.backgroundColor = btncolor;
+    // console.log(evn)
+ }
+ document.getElementById('autoclick').click();
+
+// End Contact Section 
